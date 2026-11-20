@@ -1,0 +1,101 @@
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import 'tailwindcss';
+
+:root {
+	--input-text: 1.2rem;
+	--input-label: 1.2rem;
+}
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+
+		transition:
+			background-color 0.3s,
+			border 0.3s;
+	}
+	html {
+		font-size: 62.5%;
+	}
+	body {
+		margin: 0;
+		font-family: var(--font-sans);
+		color: var(--text);
+		transition:
+			background-color 0.3s,
+			border 0.3s;
+		min-height: 100vh;
+		line-height: 1.5;
+		font-size: 1.6rem;
+	}
+
+	h1,
+	h2 {
+		font-weight: 700;
+		color: var(--text-h);
+	}
+
+	h1 {
+		font-size: 3rem;
+		letter-spacing: -1.68px;
+		color: #000;
+	}
+	h2 {
+		font-size: 2.4rem;
+		line-height: 118%;
+		letter-spacing: -0.24px;
+		margin: 0 0 8px;
+	}
+	h3 {
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+@theme {
+	--color-primary: #0f172a;
+	--color-action: #2563eb;
+	--color-action-hover: #1d4ed8;
+	--color-canvas: #f8fafc;
+	--color-border: #e2e8f0;
+	--color-success: #16a34a;
+	--color-warning: #d97706;
+	--color-danger: #dc2626;
+	--color-secondary: #334155;
+	--color-white: #fff;
+	--color-grey-50: #f9fafb;
+	--color-grey-200: #e5e7eb;
+	--color-mid-gray: #64748b;
+	--color-black: #000;
+	--font-sans: 'Inter Variable', sans-serif;
+
+	--radius-control: 50%;
+	--radius-card: 0.75rem;
+
+	--shadow-card: 0 1px 2px rgb(16 46 28 / 0.05), 0 1px 3px rgb(16 46 28 / 0.08);
+
+	--shadow-card-hover:
+		0 4px 8px rgb(16 46 28 / 0.08), 0 8px 20px rgb(16 46 28 / 0.06);
+}
+
+.input-txt {
+	font-size: var(--input-text);
+	border: 1px solid var(--color-border);
+	background: #fff;
+	border-radius: 5px;
+	padding: 0.8rem 1.2rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.input-label {
+	font-size: var(--input-label);
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
